@@ -103,14 +103,7 @@ void updateCurrentCell()
 //I created this for it to do small adjustments if it is too close to a wall
 void adjustment()
 {
-  //This is the area where you might have to edit stuff. If it is closer to a wall, I make it turn more than normally.
-  //If you figure out something better go for it. I've messed around with different
-  //values to try and figure something good out but it's possible this may not work all time. I have tried it and it has worked an amount of the time.
-  //There's more information on the next function to what could possibly be changed to make it work better.
-
-  //For the further distance, I found that adjusting by one tick works best since if it is greater it usually messes up because of the front sensor.
-  //When it's closer, I make it move by 2 just to make it get away from the wall as fast as possible. This does cause problems with the way the robot is facing though.
-  //If it adjusts too much, it won't be facing forward anymore. If you find a better way to make the robot follow walls go for it
+ 
 
   if(getCombinedDistance(SLEFT) < 2.5)
   {
@@ -142,9 +135,7 @@ void adjustment()
 //Goes to the middle of a cell
 void travelToMid()
 {
-  //I've split traveling to the middle of a cell to multiple parts so that it will adjust while traveling to the middle. In total, the numbers on the otherside should add up to 36 since
-  //It was originally leftTicks < 36. Now the numbers are 14, 10, and 12, which add up to 36. You can split it up more or change the numbers around, or try something completely
-  //different. 
+  
   resetCounts();
   while(leftTicks < 14){
     takeNewMeasurement(SLEFT);
