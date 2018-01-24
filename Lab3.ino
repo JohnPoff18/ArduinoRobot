@@ -219,14 +219,7 @@ bool DFS(){
         }
       }
       //If everything around the robot is a wall or visited, time to backtrack
-      //TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
-      //The code below will probably be similar for your following the shortest path. First, you will need to probably create a new stack and push onto it the path in reverse
-      //like you are doing in your stack reverse function. Instead of printing, just put it on a stack. Then you pop of the top of the stack, since that will be the current position,
-      //and go to whatever is on top of the stack. Check if the cell in front is the cell on top of the stack. If it isn't, turnRobot(). If it is, move forward until you
-      //detect a color. Once a color is detected, travelToMid(). Then repeat. You will have to create a new top() function since the current top() function only returns what was
-      //used in my stack. Also, you'll have to change around things from my code when you change it to BFS since there are probably things in the code below you don't have to worry about.
-      //You'll still need the takeNewMeasurement stuff since that is needed to have the robot do a bit of wall following. Don't copy the stuff that has to do with broke.  
-      //I put a comment at one such spot below. That's in case the robot hits a wall or messes up, we can hit the select button so that we still get points for displaying the map.
+     
       else if(allWallsOrVisited()){
         pop();  //Pops current cell
         while(true){
@@ -474,9 +467,7 @@ void initDFS(){
 }
 
 bool BFS(){
-  //Put your "main" code in here. This will run your code if BFS is selected. Returning false
-  //makes the program loop. Returning true exits the loop andd brings you back to the options screen
-  //Get current color
+  
   getColor();
   //empty the stack from DFS
   emptyStack();
