@@ -45,8 +45,7 @@ int getColor()
 
   lcd.setCursor(0, 0);
 
-  //You can add the code to change color inside of the if and else statements. When it isn't blue or red just make it
-  //back to the original color
+  //changes LCD light to the color of the line it passes
   if(redFrequency < 46 && greenFrequency > blueFrequency && greenFrequency > 75 && redFrequency < blueFrequency)
   {
     lcd.setBacklight(RED);
